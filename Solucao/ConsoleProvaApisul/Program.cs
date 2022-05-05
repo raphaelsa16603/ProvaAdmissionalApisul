@@ -63,27 +63,27 @@ namespace ProvaAdmissionalCSharpApisul
 
             System.Console.WriteLine("=========================================================");
             var Valor = serv.percentualDeUsoElevadorA();
-            System.Console.WriteLine($"Precentual de uso do Elevador A : {Valor}");
+            System.Console.WriteLine($"Precentual de uso do Elevador A : {Valor*100}%");
             System.Console.WriteLine("---------------------------------------------------------");
 
             System.Console.WriteLine("=========================================================");
             Valor = serv.percentualDeUsoElevadorB();
-            System.Console.WriteLine($"Precentual de uso do Elevador B : {Valor}");
+            System.Console.WriteLine($"Precentual de uso do Elevador B : {Valor * 100}%");
             System.Console.WriteLine("---------------------------------------------------------");
 
             System.Console.WriteLine("=========================================================");
             Valor = serv.percentualDeUsoElevadorC();
-            System.Console.WriteLine($"Precentual de uso do Elevador C : {Valor}");
+            System.Console.WriteLine($"Precentual de uso do Elevador C : {Valor * 100}%");
             System.Console.WriteLine("---------------------------------------------------------");
 
             System.Console.WriteLine("=========================================================");
             Valor = serv.percentualDeUsoElevadorD();
-            System.Console.WriteLine($"Precentual de uso do Elevador D : {Valor}");
+            System.Console.WriteLine($"Precentual de uso do Elevador D : {Valor * 100}%");
             System.Console.WriteLine("---------------------------------------------------------");
 
             System.Console.WriteLine("=========================================================");
             Valor = serv.percentualDeUsoElevadorE();
-            System.Console.WriteLine($"Precentual de uso do Elevador E : {Valor}");
+            System.Console.WriteLine($"Precentual de uso do Elevador E : {Valor * 100}%");
             System.Console.WriteLine("---------------------------------------------------------");
 
             System.Console.WriteLine("=========================================================");

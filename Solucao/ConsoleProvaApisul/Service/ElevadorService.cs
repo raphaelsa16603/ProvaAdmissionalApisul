@@ -46,7 +46,7 @@ namespace ConsoleProvaApisul.Service
                     contador = x.Sum(b => 1)
                 }).ToList();
 
-            ret = ret.OrderBy(a => a.contador).ToList();
+            ret = ret.OrderByDescending(a => a.contador).ToList();
 
             var retorno = ret.Select(y => y.elevador).ToList();
 
@@ -64,7 +64,7 @@ namespace ConsoleProvaApisul.Service
                     contador = x.Sum(b => 1)
                 }).ToList();
 
-            ret = ret.OrderByDescending(a => a.contador).ToList();
+            ret = ret.OrderBy(a => a.contador).ToList();
 
             var retorno = ret.Select(y => y.elevador).ToList();
 
@@ -79,7 +79,7 @@ namespace ConsoleProvaApisul.Service
                 .OrderBy(x => x.andar).ToList();
             int totalUsoElevador = porElevador.Count;
 
-            float percentualDeUso = totalUsoElevador / total;
+            float percentualDeUso = (float)(Convert.ToDecimal(totalUsoElevador) / Convert.ToDecimal(total));
 
             return percentualDeUso;
         }
@@ -92,7 +92,7 @@ namespace ConsoleProvaApisul.Service
                 .OrderBy(x => x.andar).ToList();
             int totalUsoElevador = porElevador.Count;
 
-            float percentualDeUso = totalUsoElevador / total;
+            float percentualDeUso = (float)(Convert.ToDecimal(totalUsoElevador) / Convert.ToDecimal(total));
 
             return percentualDeUso;
         }
@@ -105,7 +105,7 @@ namespace ConsoleProvaApisul.Service
                 .OrderBy(x => x.andar).ToList();
             int totalUsoElevador = porElevador.Count;
 
-            float percentualDeUso = totalUsoElevador / total;
+            float percentualDeUso = (float)(Convert.ToDecimal(totalUsoElevador) / Convert.ToDecimal(total));
 
             return percentualDeUso;
         }
@@ -118,7 +118,7 @@ namespace ConsoleProvaApisul.Service
                 .OrderBy(x => x.andar).ToList();
             int totalUsoElevador = porElevador.Count;
 
-            float percentualDeUso = totalUsoElevador / total;
+            float percentualDeUso = (float)(Convert.ToDecimal(totalUsoElevador) / Convert.ToDecimal(total));
 
             return percentualDeUso;
         }
@@ -131,7 +131,7 @@ namespace ConsoleProvaApisul.Service
                 .OrderBy(x => x.andar).ToList();
             int totalUsoElevador = porElevador.Count;
 
-            float percentualDeUso = totalUsoElevador / total;
+            float percentualDeUso = (float)(Convert.ToDecimal(totalUsoElevador) / Convert.ToDecimal(total));
 
             return percentualDeUso;
         }
@@ -182,14 +182,14 @@ namespace ConsoleProvaApisul.Service
             var porTurno = this._historico.OrderBy(x => x.turno).ToList();
 
             var retT = porTurno
-                .GroupBy(a => a.elevador)
+                .GroupBy(a => a.turno)
                 .Select(x => new histogramaTurno
                 {
                     turno = x.First().turno.Trim()[0],
                     contador = x.Sum(b => 1)
                 }).ToList();
 
-            retT = retT.OrderBy(a => a.contador).ToList();
+            retT = retT.OrderByDescending(a => a.contador).ToList();
 
             var rT = retT.Select(y => y.turno).ToList();
 
